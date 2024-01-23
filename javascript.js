@@ -45,5 +45,5 @@ function getPlayerSelection() {
     const computerSelection = getComputerChoice();
     const winnerMessage = playRound(playerSelection, computerSelection);
   
-    console.log(`Round ${round}: ${winnerMessage}`);
+    alert(`Round ${round}: ${winnerMessage}`);
   }
