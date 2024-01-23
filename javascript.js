@@ -40,8 +40,10 @@ function getPlayerSelection() {
   }
 
 
-  const playerSelection = getPlayerSelection();
-  const computerSelection = getComputerChoice();
-  const winnerMessage = playRound(playerSelection, computerSelection);
-  prompt (winnerMessage);
-  console.log(winnerMessage);
+  for (let round = 1; round <= 5; round++) {
+    const playerSelection = getPlayerSelection();
+    const computerSelection = getComputerChoice();
+    const winnerMessage = playRound(playerSelection, computerSelection);
+  
+    console.log(`Round ${round}: ${winnerMessage}`);
+  }
