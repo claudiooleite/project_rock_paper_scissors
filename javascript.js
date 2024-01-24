@@ -31,6 +31,8 @@ function playRound(playerSelection, computerSelection) {
         return 'You Lose! Rock beats Scissors';
     } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper') {
         return 'You win! Scissors beats Paper';
+    } else {
+        return 'Invalid! Repeat';
     }
 }
 
