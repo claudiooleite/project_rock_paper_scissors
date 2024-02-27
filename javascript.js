@@ -1,26 +1,21 @@
 // Rock Paper Scissors\
 
 /*
-function playerSelection(option){
-  if (option === 'Rock'){ 
-    return 'Rock';
-    
-  } else if (option ==='Paper'){ 
-    return 'Paper';
-    
-  } else if (option ==='Scissors'){ 
-    return 'Scissors';
-  } else 
-    return "Invalid option";
-}
-const buttonPaper = document.querySelector('#paper')
-const buttonRock = document.querySelector('#rock')
-const buttonScissors = document.querySelector('#scissors')
+- create and style options 
+    .  1 button for player 
+    .  1 image teaser for computer
+    . 1 result log
+    . counter for the best of 5
+- 1 create a game choice
+- create a player choice
+- compare them
+- show the result
 
-const playerChose = playerSelection('Rock');
-console.log(playerChose)
-}
+- as soon as the player click his choice, computer show his
+
 */
+
+
 const btn = document.querySelector('#btn');
 btn.addEventListener('click', () => {
   alert("Hello World");
