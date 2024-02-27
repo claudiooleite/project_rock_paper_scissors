@@ -16,14 +16,7 @@
 */
 
 
-const btn = document.querySelector('#btn');
-btn.addEventListener('click', () => {
-  alert("Hello World");
-});
-
-
-
-function computerChoice() {
+function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3) + 1;
     if (randomNumber === 1) {
         return 'rock';
@@ -34,24 +27,20 @@ function computerChoice() {
     }
 }
 
-let computerSelection = computerChoice();
-console.log(computerSelection);
-
-
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') {
+    if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return 'You Win! Rock beats Scissors';
-    } else if (playerSelection.toLowerCase() === computerSelection) {
+    } else if (playerSelection == computerSelection) {
         return 'It is a Tie! One more?';
-    } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper') {
+    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
         return 'You Lose! Paper beats Rock';
-    } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'scissors') {
+    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
         return 'You Lose! Scissors beats Paper';
-    } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') {
+    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
         return 'Yo Win! Paper beats rock';
-    } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'rock') {
+    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
         return 'You Lose! Rock beats Scissors';
-    } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper') {
+    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
         return 'You win! Scissors beats Paper';
     } else {
         return 'Invalid! Repeat';
@@ -60,6 +49,16 @@ function playRound(playerSelection, computerSelection) {
 
 
 
-let playerSelection = 'rock';
-console.log(playerSelection);
+const playerSelection = 'rock';
+const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
+
+const paperChoice = document.querySelector('#paper');
+paperChoice.addEventListener('click', playRound('paper', computerSelection));
+
+
+
+
+
+
+
