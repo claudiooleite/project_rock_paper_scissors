@@ -7,28 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+        <h2>First to 10 is the Winner</h2>
+    </header>
+    <button type="button" class="btn btn-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+        <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"></path>
+        </svg>
+      </button>
     <div class="container text-bg-primary p-3">
-        <div class="player choices">
-            <button id="paper"><img src="paper.jpg" class="img-thumbnail" alt="..." width="100px"></button>
-            <button id="rock" ><img src="rock.jpg" class="img-thumbnail" alt="..." width="100px"></button>
-            <button id="scissors"><img src="scissors.jpg" class="img-thumbnail" alt="..." width="100px"></button>
-        </div>
+        <div class="game-buttons">
+            <div class="player choices">
+                <button id="paper"><img src="paper.jpg" class="img-thumbnail" alt="..." width="100px"></button>
+                <button id="rock" ><img src="rock.jpg" class="img-thumbnail" alt="..." width="100px"></button>
+                <button id="scissors"><img src="scissors.jpg" class="img-thumbnail" alt="..." width="100px"></button>
+            </div>
+            <div><h1 id="updatePlayer" class="result">0</h1></div>
+            <div><h1 id="vs">VS</h1></div>
+            <div><h1 id="updateComputer" class="result">0</h1></div>
 
-        <div>
-            <button id="random"><img src="therock.jpg" class="img-thumbnail" alt="..." width="100px"></button>
-            <h1>Computer Choice</h1>
+            <div id="therock">
+                <button id="random"><img src="therock.jpg" class="img-thumbnail" alt="..." width="150px"></button>
+            </div>
         </div>
-
         <div>
-            <p id="result">Result</p>
-            <img src="game2.jpg" alt="">
-        </div>
-        
-
-        <div>
-            <h2 id="total">Total</h2>
-            <p>Player</p>
-            <p>Computer</p>
+            <p id="result"></p>
         </div>
     </div>
     <script src="javascript.js"></script>

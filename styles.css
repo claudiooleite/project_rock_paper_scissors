@@ -1,7 +1,54 @@
-* {
-    outline: 1px solid red;
-  }
+
 
   /* .container {
     background-color: black;
   } */
+
+  :root {
+    color-scheme: light;
+  }
+  
+  body {
+    font-size: 1.50rem;
+    place-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .dark {
+    color-scheme: dark;
+  }
+
+  /* style buttons */
+
+  .player > button {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; /* Make it a circle by setting border-radius to 50% */ 
+    background-color: white;
+}
+
+header {
+  display: grid;
+  place-items: center;
+}
+#random {
+  background-color: white;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.result, #vs, #result {
+  font-size: 5rem;
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+}
+
+#lights {
+  
+}

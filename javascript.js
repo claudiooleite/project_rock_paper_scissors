@@ -48,8 +48,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
     // counter
     let counter = 0;
     // vs
@@ -59,10 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const paperChoice = document.getElementById('paper');
     paperChoice.addEventListener('click', buttonClickPaper);
     const result = document.getElementById('result');
-    let total = document.getElementById('total');
-    let totalNumber= document.createElement('h1')
-    totalNumber.id = 'totalNumber';
-
 
     function buttonClickPaper(){
         let computerSelection = getComputerChoice();
@@ -78,9 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         result.textContent = paper;
         result.style.fontSize = '30px'
-        totalNumber.textContent = counter;
-        total.appendChild(totalNumber);
-        
+        document.getElementById('updatePlayer').textContent = playerWin;
+        document.getElementById('updateComputer').textContent = playerLost;
+
     }
 
     // player choose scissors
@@ -100,9 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
             counter = counter;
         }
         result.textContent = scissors;
-        result.style.fontSize = '30px'
-        totalNumber.textContent = counter;
-        total.appendChild(totalNumber);
+        result.style.fontSize = '30px';
+        document.getElementById('updatePlayer').textContent = playerWin;
+        document.getElementById('updateComputer').textContent = playerLost;
     }
 
     // player choose rock
@@ -123,14 +117,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         result.textContent = rock;
         result.style.fontSize = '30px'
-        totalNumber.textContent = counter;
-        total.appendChild(totalNumber);
+        document.getElementById('updatePlayer').textContent = playerWin;
+        document.getElementById('updateComputer').textContent = playerLost;
+
     }
 
+    if (playerWin === 10){
+        result.textContent = 'You Won! Feel lucky to try again?';
+        result.style.fontSize = '30px'
+        let buttonYes = document.createElement('button');
+        buttonYes.textContent = "Let's do it!"
+        buttonYes.addEventListener('click', reset)
+    }
+    
+    const reset = option => 0;
+
+
+
+
+// toogle button
+let root = document.querySelector(":root");
+let button = document.querySelector("button");
+
+button.addEventListener('click', () => {
+  event.preventDefault();
+  root.classList.toggle('dark');
 });
-
-
-
 
 
 
